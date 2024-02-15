@@ -7,11 +7,11 @@ import Header from "../Header/Header";
 const Layout = () => {
     return (
         <main>
-            <div class="flex h-screen">
+            <div className="flex h-screen">
                 <Sidebar />
-                <div class="flex-1 p-10">
+                <div className="flex-1 p-10">
                     <Header />
-                    <div class="p-4">
+                    <div className="p-4">
                         <Outlet />
                     </div>
                 </div>

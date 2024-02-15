@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = ({ isShow, sidebarHandler }) => {
+const Sidebar = () => {
     return (
         <>
             <div class="sidebar w-64 flex-shrink-0 absolute md:relative h-screen p-[18px]">

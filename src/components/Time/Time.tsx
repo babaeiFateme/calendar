@@ -22,9 +22,9 @@ const Time = () => {
         <span className='text-green-400'>امروز چندمه ؟</span>
         <span>تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران</span>
       </div>
-      <div className='flex gap-2 items-center'>
-        <span className=' p-[15px] box'>{formatTime(time.getHours())}</span>
-        <span className='p-[15px] box'>{formatTime(time.getMinutes())}</span>
+      <div className='flex gap-2 items-center flex-row-reverse'>
+        <span className=' p-[15px] box'>{formatTime(time.getHours())}</span> :
+        <span className='p-[15px] box'>{formatTime(time.getMinutes())}</span> :
         <span className='p-[15px] box'>{formatTime(time.getSeconds())}</span>
       </div> 
     </div>
