@@ -1,14 +1,19 @@
 body {
     background-color: #222423;
     height: 100vh;
+    color: #fff;
 }
 
 .sidebar {
     background-image: linear-gradient(to left, #242726, #242726);
-    border: 1px solid #fff;
-
     border: 3px solid;
     border-image: linear-gradient(to right, #242726, #242726);
     border-image-slice: 1;
 
+}
+
+.box {
+    border: 1px solid;
+    border-image: linear-gradient(to right, #78797950, #242726);
+    border-image-slice: 1;
 }

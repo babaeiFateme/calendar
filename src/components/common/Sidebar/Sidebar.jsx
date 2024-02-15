@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const Sidebar = ({ isShow, sidebarHandler }) => {
     return (
         <>
-            <div class="sidebar w-64 flex-shrink-0 absolute md:relative h-screen">
+            <div class="sidebar w-64 flex-shrink-0 absolute md:relative h-screen p-[18px]">
                 <div class="p-4">
                     <h1 class="text-xl font-bold mb-[80px]">تایمنو</h1>
                     <ul class="mt-4">
