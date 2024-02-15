@@ -1,12 +1,13 @@
 import React from 'react'
-import  getPersianDayName  from '../../../core/utils/persianDayName';
+import getPersianDate from '../../../core/utils/persianDate';
+
 
 const Calendar = () => {
-  const dayName = getPersianDayName();
+  const strDate = getPersianDate();
   return (
     <ul>
       <li className='flex justify-between'>
-       <div>تطتایبل ۱۰ بتسیباست ۲۳۱۳</div>
+       <div>{strDate}</div>
        <div> ۱۴۰۲/۱۱/۱۰</div>
       </li>
     </ul>
