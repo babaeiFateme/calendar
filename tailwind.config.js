@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    rtl: true,
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         colors: {

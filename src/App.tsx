@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import Layout from './components/common/Layouts/Layout';
+
 
 function App() {
   return (
     <div className="App font-extrabold	text-green-500">
-      Hello world!
+      <Layout ></Layout>
     </div>
   );
 }
