@@ -5,10 +5,10 @@ import { Link, useLocation } from "react-router-dom";
 const Sidebar = () => {
     return (
         <>
-            <div class="sidebar w-64 flex-shrink-0 absolute md:relative h-screen p-[18px]">
-                <div class="p-4">
-                    <h1 class="text-xl font-bold mb-[80px]">تایمنو</h1>
-                    <ul class="mt-4">
+            <div className="sidebar w-64 flex-shrink-0 absolute md:relative h-screen p-[18px]">
+                <div className="p-4">
+                    <h1 className="text-xl font-bold mb-[80px]">تایمنو</h1>
+                    <ul className="mt-4">
                         <li className="mb-[40px]">
                             <div>
                                 <Link to="/">لیست داشیورد</Link>
