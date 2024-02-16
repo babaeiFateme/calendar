@@ -37,9 +37,9 @@ const Calendar = () => {
       <li className='flex justify-between py-[25px] text-white'>
         <div>{strDate}</div>
         <div>
-          <span className='text-green-500 pr-2'>{persianDateNumber.month}</span> /
-          <span className='text-green-500 pr-2'>{persianDateNumber.day}</span> /
-          <span className='text-green-500 pr-2'>{persianDateNumber.yaer}</span>
+          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
         </div>
       </li>
 
@@ -47,16 +47,20 @@ const Calendar = () => {
         <div className='py-[25px] flex justify-between '>
           <div>{hijriDayOfMonth}</div>
           <div>
-            <span className='text-green-500 pr-2'>{persianDateNumber.month}</span> /
-            <span className='text-green-500 pr-2'>{persianDateNumber.day}</span> /
-            <span className='text-green-500 pr-2'>{persianDateNumber.yaer}</span>
+            <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
+            <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
+            <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
           </div>
         </div>
       </li>
 
       <li className='flex justify-between py-[25px] '>
         <div>{englishDate}</div>
-        <div> {englishDateNumber}</div>
+        <div>
+          <span className='text-green-500 p-2'> {englishDateNumber.month}</span> -
+          <span className='text-green-500 p-2'> {englishDateNumber.day}</span> -
+          <span className='text-green-500 p-2'> {englishDateNumber.year}</span>
+        </div>
       </li>
       <li className='flex w-full gap-2 flex-wrap justify-between items-center'>
         <Button onClick={prevDateHandler}>
