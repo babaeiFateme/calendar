@@ -1,8 +1,3 @@
-export const getPersianDate = (currentDate: Date): string => {
-    let options: object = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }
-    let date = currentDate.toLocaleDateString('fa-IR', options)
-    return date;
-}
 
 export const formatPersianDate = (date: Date) => {
     let today = ""
