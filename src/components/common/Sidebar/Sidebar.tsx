@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
-// import logo from '../../../assets/images/logo.jpg'; 
+
+import logo from '../icons/logo.jpg'
 
 
 
@@ -19,10 +20,10 @@ const Sidebar = () => {
         <>
             <div className="sidebar w-[350px] flex-shrink-0 absolute md:relative h-screen">
                 <div>
-                    <h1 className="text-xl font-bold  p-[36px]"
+                    <h1 className="text-xl font-bold  p-[36px] flex items-center gap-3"
                     >
-                        تایمنو
-                        {/* <img src={logo} alt="timnow" /> */}
+                        <img src={logo} alt="timnow" width={59} height={59} />
+                        تایمینو
                     </h1>
                     <ul className="mt-4">
                         {sidebarItems.map((item, index) => (
