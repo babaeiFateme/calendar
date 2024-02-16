@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'yekan';
-    src: url('../fonts/iranyekanwebregularfanum.woff') format('woff2'),
+    font-family: 'pinar';
+    src: url('../fonts/Pinar-VF[@mimvid].ttf'),
 }
 
 body {
-    font-family: 'yekan', sans-serif;
+    font-family: 'pinar';
 }
