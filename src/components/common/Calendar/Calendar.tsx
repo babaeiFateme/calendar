@@ -6,6 +6,7 @@ import { formatDate, getEnglishDate } from '../../../core/utils/englishMonths';
 import { formatPersianDate, getPersianDate } from '../../../core/utils/persianDate';
 import ArrowLeft from '../icons/ArrowLeft';
 import ArrowRight from '../icons/ArrowRight';
+import { getCovertDate } from '../../../core/utils/getConvertDate';
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -24,17 +25,17 @@ const Calendar = () => {
     updateDates(-1);
   };
 
+  const persianDate = getCovertDate(currentDate, 'fa-IR');
+  const englishDate = getCovertDate(currentDate, 'en-us');
+  const hijriDate = getCovertDate(currentDate, 'ar-u-ca-islamic');
 
-  const strDate = getPersianDate(currentDate);
-  const hijriDayOfMonth = getHijriDayOfMonth(currentDate);
-  const englishDate = getEnglishDate(currentDate);
   const englishDateNumber = formatDate(currentDate)
   const persianDateNumber = formatPersianDate(currentDate)
 
   return (
     <ul className='list-date'>
       <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
-        <div>{strDate}</div>
+        <div>{persianDate}</div>
         <div>
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
@@ -44,7 +45,7 @@ const Calendar = () => {
 
       <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
 
-        <div>{hijriDayOfMonth}</div>
+        <div>{hijriDate}</div>
         <div>
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
