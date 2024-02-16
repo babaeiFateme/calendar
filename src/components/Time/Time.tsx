@@ -23,10 +23,10 @@ const Time = () => {
         <span>تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران</span>
       </div>
       <div className='flex gap-2 items-center flex-row-reverse'>
-        <span className=' p-[15px] box'>{formatTime(time.getHours())}</span> :
-        <span className='p-[15px] box'>{formatTime(time.getMinutes())}</span> :
-        <span className='p-[15px] box'>{formatTime(time.getSeconds())}</span>
-      </div> 
+        <span className='p-[15px] box aspect-square min-w-[50px]'>{formatTime(time.getHours())}</span> :
+        <span className='p-[15px] box aspect-square min-w-[50px]'>{formatTime(time.getMinutes())}</span> :
+        <span className='p-[15px] box aspect-square min-w-[50px]'>{formatTime(time.getSeconds())}</span>
+      </div>
     </div>
   );
 };

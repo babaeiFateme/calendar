@@ -12,10 +12,15 @@ body {
 
 }
 
-.box {
+.header-box {
     border: 1px solid;
-    border-image: linear-gradient(to right, #78797950, #242726);
+    border-image: linear-gradient(to left, #78797950, #242726);
     border-image-slice: 1;
+    background-image: linear-gradient(to right, #242726, #7978781a)
+}
+
+.box {
+    background-image: linear-gradient(to left, #242726, #7978781a)
 }
 
 .list-date .item-box {
