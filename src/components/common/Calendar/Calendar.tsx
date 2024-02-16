@@ -36,8 +36,8 @@ const Calendar = () => {
       <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
         <div>{strDate}</div>
         <div>
-          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.year}</span>
         </div>
       </li>
@@ -46,8 +46,8 @@ const Calendar = () => {
 
         <div>{hijriDayOfMonth}</div>
         <div>
-          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.year}</span>
         </div>
       </li>
