@@ -4,5 +4,4 @@ const getPersianDate = (): string => {
     const persianDate = currentDate.toLocaleDateString('fa-IR', options);
     return persianDate
 }
-
 export default getPersianDate
