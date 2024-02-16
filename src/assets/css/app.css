@@ -51,3 +51,7 @@ svg {
 .sidebar .active svg {
     fill: white !important;
 }
+
+.sidebar svg {
+    fill: #555555;
+}
