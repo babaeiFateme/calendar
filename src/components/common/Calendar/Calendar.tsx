@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { getHijriDayOfMonth } from '../../../core/utils/hijriMonths';
 
 import Button from '../Button/Button';
-import getPersianDate from '../../../core/utils/persianDate';
 import { formatDate, getEnglishDate } from '../../../core/utils/englishMonths';
+import { formatPersianDate, getPersianDate } from '../../../core/utils/persianDate';
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  const updateDates = (dateModifier:number) => {
+  const updateDates = (dateModifier: number) => {
     const newDate = new Date(currentDate);
     newDate.setDate(newDate.getDate() + dateModifier);
     setCurrentDate(newDate);
@@ -27,21 +27,30 @@ const Calendar = () => {
   const hijriDayOfMonth = getHijriDayOfMonth(currentDate);
   const englishDate = getEnglishDate(currentDate);
   const englishDateNumber = formatDate(currentDate)
+  const persianDateNumber = formatPersianDate(currentDate)
 
 
 
 
   return (
     <ul>
-      <li className='flex justify-between py-[25px]'>
+      <li className='flex justify-between py-[25px] text-white'>
         <div>{strDate}</div>
-        <div> ۱۴۰۲/۱۱/۱۰</div>
+        <div>
+          <span className='text-green-500 pr-2'>{persianDateNumber.month}</span> /
+          <span className='text-green-500 pr-2'>{persianDateNumber.day}</span> /
+          <span className='text-green-500 pr-2'>{persianDateNumber.yaer}</span>
+        </div>
       </li>
 
       <li className=''>
         <div className='py-[25px] flex justify-between '>
           <div>{hijriDayOfMonth}</div>
-          <div> ۱۴۰۲/۱۱/۱۰</div>
+          <div>
+            <span className='text-green-500 pr-2'>{persianDateNumber.month}</span> /
+            <span className='text-green-500 pr-2'>{persianDateNumber.day}</span> /
+            <span className='text-green-500 pr-2'>{persianDateNumber.yaer}</span>
+          </div>
         </div>
       </li>
 
