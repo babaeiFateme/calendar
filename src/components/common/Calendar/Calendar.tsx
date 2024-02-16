@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { getHijriDayOfMonth } from '../../../core/utils/hijriMonths';
 
 import Button from '../Button/Button';
-import { getEnglishDate } from '../../../core/utils/englishMonths';
 import getPersianDate from '../../../core/utils/persianDate';
+import { getEnglishDate } from '../../../core/utils/englishMonths';
 
 const Calendar = () => {
-  const [strDate, setStrDate] = useState("");
-  const [hijriDayOfMonth, setHijriDayOfMonth] = useState("");
-  const [englishDate, setEnglishDate] = useState("");
-
-  useEffect(() => {
-    const currentDate = new Date();
-    setStrDate(getPersianDate(currentDate));
-    setHijriDayOfMonth(getHijriDayOfMonth(currentDate));
-    setEnglishDate(getEnglishDate(currentDate));
-  }, []);
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   const updateDates = (dateModifier:number) => {
-    const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() + dateModifier);
-
-    setStrDate(getPersianDate(currentDate));
-    setHijriDayOfMonth(getHijriDayOfMonth(currentDate));
-    setEnglishDate(getEnglishDate(currentDate));
+    const newDate = new Date(currentDate);
+    newDate.setDate(newDate.getDate() + dateModifier);
+    setCurrentDate(newDate);
   };
 
   const nextDateHandler = () => {
@@ -33,6 +21,10 @@ const Calendar = () => {
   const prevDateHandler = () => {
     updateDates(-1);
   };
+
+  const strDate = getPersianDate(currentDate);
+  const hijriDayOfMonth = getHijriDayOfMonth(currentDate);
+  const englishDate = getEnglishDate(currentDate);
 
   return (
     <ul>
