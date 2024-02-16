@@ -4,7 +4,7 @@ import Calendar from '../components/common/Calendar/Calendar'
 
 const Landing = () => {
   return (
-    <div>
+    <div className='px-[64]'>
       <Time />
       <Calendar />
     </div>
