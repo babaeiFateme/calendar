@@ -17,3 +17,22 @@ body {
     border-image: linear-gradient(to right, #78797950, #242726);
     border-image-slice: 1;
 }
+
+.list-date .item-box {
+    border: 1px solid;
+    border-image: linear-gradient(to right, #78797950, #242726);
+    border-image-slice: 1;
+    background-image: linear-gradient(to right, #7978781a, #242726);
+
+}
+.list-date .item-box:nth-child(even) {
+    border: 1px solid;
+    border-image: linear-gradient(to left, #78797950, #242726);
+    border-image-slice: 1;
+    background-image: linear-gradient(to left, #7978781a, #242726);
+
+}
+
+svg {
+    width: 50px;
+}

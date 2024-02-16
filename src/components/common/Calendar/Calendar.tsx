@@ -4,6 +4,8 @@ import { getHijriDayOfMonth } from '../../../core/utils/hijriMonths';
 import Button from '../Button/Button';
 import { formatDate, getEnglishDate } from '../../../core/utils/englishMonths';
 import { formatPersianDate, getPersianDate } from '../../../core/utils/persianDate';
+import ArrowLeft from '../icons/ArrowLeft';
+import ArrowRight from '../icons/ArrowRight';
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -28,13 +30,10 @@ const Calendar = () => {
   const englishDate = getEnglishDate(currentDate);
   const englishDateNumber = formatDate(currentDate)
   const persianDateNumber = formatPersianDate(currentDate)
-
-
-
-
+  
   return (
-    <ul>
-      <li className='flex justify-between py-[25px] text-white'>
+    <ul className='list-date'>
+      <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
         <div>{strDate}</div>
         <div>
           <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
@@ -43,18 +42,17 @@ const Calendar = () => {
         </div>
       </li>
 
-      <li className=''>
-        <div className='py-[25px] flex justify-between '>
-          <div>{hijriDayOfMonth}</div>
-          <div>
-            <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
-            <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
-            <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
-          </div>
+      <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
+
+        <div>{hijriDayOfMonth}</div>
+        <div>
+          <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
+          <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
         </div>
       </li>
 
-      <li className='flex justify-between py-[25px] '>
+      <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
         <div>{englishDate}</div>
         <div>
           <span className='text-green-500 p-2'> {englishDateNumber.month}</span> -
@@ -62,12 +60,18 @@ const Calendar = () => {
           <span className='text-green-500 p-2'> {englishDateNumber.year}</span>
         </div>
       </li>
-      <li className='flex w-full gap-2 flex-wrap justify-between items-center'>
-        <Button onClick={prevDateHandler}>
-          روز قبل
+      <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
+        <Button className='flex gap-2 items-center' onClick={prevDateHandler}>
+          <ArrowRight />
+          <span className='text-green-500'>
+            روز قبل
+          </span>
         </Button>
-        <Button onClick={nextDateHandler}>
-          روز بعد
+        <Button className='flex gap-2 items-center' onClick={nextDateHandler}>
+          <span className='text-green-500'>
+            روز بعد
+          </span>
+          <ArrowLeft />
         </Button>
       </li>
     </ul>
