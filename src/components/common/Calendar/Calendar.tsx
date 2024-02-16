@@ -38,7 +38,7 @@ const Calendar = () => {
         <div>
           <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
-          <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
+          <span className='text-green-500 p-2'>{persianDateNumber.year}</span>
         </div>
       </li>
 
@@ -48,7 +48,7 @@ const Calendar = () => {
         <div>
           <span className='text-green-500 p-2'>{persianDateNumber.month}</span> /
           <span className='text-green-500 p-2'>{persianDateNumber.day}</span> /
-          <span className='text-green-500 p-2'>{persianDateNumber.yaer}</span>
+          <span className='text-green-500 p-2'>{persianDateNumber.year}</span>
         </div>
       </li>
 

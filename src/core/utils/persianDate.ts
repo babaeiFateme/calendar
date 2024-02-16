@@ -6,11 +6,9 @@ export const getPersianDate = (currentDate: Date): string => {
 }
 
 export const formatPersianDate = (date: Date) => {
-
-    const year = (date.getFullYear() - 621).toString(); // Convert Gregorian year to Persian year
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    return {yaer:year, month:month, day:day}
-
-
+    let today = ""
+    let todyaArr = []
+     today = date.toLocaleDateString('fa-IR')
+     todyaArr = today.split("/")
+    return { year: todyaArr[0], month: todyaArr[1], day: todyaArr[2] }
 };
