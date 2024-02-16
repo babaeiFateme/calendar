@@ -30,7 +30,7 @@ const Calendar = () => {
   const englishDate = getEnglishDate(currentDate);
   const englishDateNumber = formatDate(currentDate)
   const persianDateNumber = formatPersianDate(currentDate)
-  
+
   return (
     <ul className='list-date'>
       <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
