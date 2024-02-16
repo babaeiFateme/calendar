@@ -25,9 +25,9 @@ const Sidebar = () => {
                         <img src={logo} alt="timnow" width={59} height={59} />
                         تایمینو
                     </h1>
-                    <ul className="mt-4">
+                    <ul className="mt-4 p-4">
                         {sidebarItems.map((item, index) => (
-                            <li key={index} className={`mb-[40px] p-3 ${index === 0 ? "active" : ""}`}>
+                            <li key={index} className={`mb-[40px] p-3 rounded-md ${index === 3 ? "active" : ""}`}>
                                 <div>
                                     <Link to={item.link} className="flex gap-2">
                                         {item.icon}

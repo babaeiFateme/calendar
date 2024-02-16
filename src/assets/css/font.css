@@ -2,7 +2,14 @@
     font-family: 'pinar';
     src: url('../fonts/Pinar-VF[@mimvid].ttf'),
 }
+@font-face {
+    font-family: 'morabaa';
+    src: url('../fonts/Morabba-ExtraBold.ttf'),
+}
 
 body {
     font-family: 'pinar';
+}
+h1{
+    font-family: 'morabaa';  
 }

@@ -54,8 +54,8 @@ const Calendar = () => {
       <li className='item-box py-6 px-7 flex justify-between text-white mb-[34px]'>
         <div>{englishDate}</div>
         <div>
-          <span className='text-green-500 p-2'> {englishDateNumber.month}</span> -
           <span className='text-green-500 p-2'> {englishDateNumber.day}</span> -
+          <span className='text-green-500 p-2'> {englishDateNumber.month}</span> -
           <span className='text-green-500 p-2'> {englishDateNumber.year}</span>
         </div>
       </li>
