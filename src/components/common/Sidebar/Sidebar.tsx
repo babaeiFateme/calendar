@@ -1,39 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
+// import logo from '../../../assets/images/logo.jpg'; 
 
-import { Link, useLocation } from "react-router-dom";
+
+
+const sidebarItems = [
+    { icon: <ChartIcon />, text: 'لیست داشبورد', link: '/' },
+    { icon: <FileIcon />, text: 'لیست خدمات', link: '/' },
+    { icon: <ShopIcon />, text: 'درخواست خدمات', link: '/' },
+    { icon: <WalletIcon />, text: 'کیف پول', link: '/' },
+    { icon: <UserIcon />, text: 'پروفایل', link: '/' },
+    { icon: <LogoutIcon />, text: 'خروج', link: '/' }
+];
 
 const Sidebar = () => {
     return (
         <>
-            <div className="sidebar w-64 flex-shrink-0 absolute md:relative h-screen p-[18px]">
-                <div className="p-4">
-                    <h1 className="text-xl font-bold mb-[80px]">تایمنو</h1>
+            <div className="sidebar w-[350px] flex-shrink-0 absolute md:relative h-screen">
+                <div>
+                    <h1 className="text-xl font-bold  p-[36px]"
+                    >
+                        تایمنو
+                        {/* <img src={logo} alt="timnow" /> */}
+                    </h1>
                     <ul className="mt-4">
-                        <li className="mb-[40px]">
-                            <div>
-                                <Link to="/">لیست داشیورد</Link>
-                            </div>
-                        </li>
-                        <li className="mb-[40px]">
-                            <div>
-                                <Link to="/">لیست خدمات</Link>
-                            </div>
-                        </li>
-                        <li className="mb-[40px]">
-                            <div>
-                                <Link to="/">کیف پول</Link>
-                            </div>
-                        </li>
-                        <li className="mb-[40px]">
-                            <div>
-                                <Link to="/">پروفایل</Link>
-                            </div>
-                        </li>
-                        <li className="mb-[40px]">
-                            <div>
-                                <Link to="/">خروج</Link>
-                            </div>
-                        </li>
+                        {sidebarItems.map((item, index) => (
+                            <li key={index} className={`mb-[40px] p-3 ${index === 0 ? "active" : ""}`}>
+                                <div>
+                                    <Link to={item.link} className="flex gap-2">
+                                        {item.icon}
+                                        <span>{item.text}</span>
+                                    </Link>
+                                </div>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

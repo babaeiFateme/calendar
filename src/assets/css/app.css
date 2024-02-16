@@ -25,6 +25,7 @@ body {
     background-image: linear-gradient(to right, #7978781a, #242726);
 
 }
+
 .list-date .item-box:nth-child(even) {
     border: 1px solid;
     border-image: linear-gradient(to left, #78797950, #242726);
@@ -35,4 +36,13 @@ body {
 
 svg {
     width: 50px;
+}
+
+.sidebar .active {
+    background-color: #00a693;
+    color: white;
+}
+
+.sidebar .active svg {
+    fill: white !important;
 }
