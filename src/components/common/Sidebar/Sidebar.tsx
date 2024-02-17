@@ -23,7 +23,7 @@ const Sidebar = () => {
                     <h1 className="text-xl font-bold  p-[36px] flex items-center gap-3"
                     >
                         <img src={logo} alt="timnow" width={59} height={59} />
-                        تایمینو
+                        تایمیــــنو
                     </h1>
                     <ul className="mt-4 p-4">
                         {sidebarItems.map((item, index) => (

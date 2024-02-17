@@ -19,7 +19,7 @@ const Time = () => {
   return (
     <div className="flex justify-between gap-3 flex-wrap items-center mt-[40px] mb-8">
       <div className='flex flex-col gap-3'>
-        <span className='text-green-400'>امروز چندمه ؟</span>
+        <span className='text-green-400'>امروز چندمــه ؟</span>
         <span>تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران</span>
       </div>
       <div className='flex gap-2 items-center flex-row-reverse'>
