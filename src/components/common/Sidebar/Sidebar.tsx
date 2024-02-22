@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
 
 import logo from '../icons/logo.jpg'
-import Discount from "src/pages/Discount";
 
 
 

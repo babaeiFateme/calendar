@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Button from '../common/Button/Button';
-import { formatDate } from '../../core/utils/englishMonths';
-import { formatPersianDate } from '../../core/utils/persianDate';
+import { formatDate } from '../../utils/englishMonths';
+import { formatPersianDate } from '../../utils/persianDate';
 import ArrowLeft from '../common/icons/ArrowLeft';
 import ArrowRight from '../common/icons/ArrowRight';
-import { getCovertDate } from '../../core/utils/getConvertDate';
+import { getCovertDate } from 'src/utils/getConvertDate';
+
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());

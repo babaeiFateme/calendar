@@ -1,21 +1,39 @@
-import { getDisCount } from "src/core/utils/getDiscount";
-import Button from "../common/Button/Button";
-import { useState } from "react";
 
+import { getDisCount } from "src/utils/getDiscount";
+import Button from "../common/Button/Button";
+import { useState, ChangeEvent, FormEvent } from "react";
+interface FormData {
+    discount: number;
+    num: number;
+}
 const CalcDiscount = () => {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         discount: 0,
         num: 0,
     });
-    const [discountResult, setDiscountResult] = useState(null);
-
-    const generateDiscountHandler = (e) => {
-        e.preventDefault();
-        const result = getDisCount(formData.discount, formData.num);
-        setDiscountResult(result);
+    const [discountResult, setDiscountResult] = useState<number | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string>("");
+    const validateFormData = (data: FormData): boolean => {
+        if (data.discount < 0 || data.discount > 100) {
+            setErrorMessage("درصد باید بین ۰ تا ۱۰۰ باشد.");
+            return false;
+        }
+        if (data.num <= 0) {
+            setErrorMessage("عدد باید مقدار مثبت داشته باشد .");
+            return false;
+        }
+        return true;
     };
 
-    const handleInputChange = (event) => {
+    const generateDiscountHandler = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (validateFormData(formData)) {
+            const result = getDisCount(formData.discount, formData.num);
+            setDiscountResult(result);
+        }
+    };
+
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData({
             ...formData,
@@ -33,6 +51,8 @@ const CalcDiscount = () => {
                     تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران
                 </span>
             </div>
+            {/* Error message display */}
+            {errorMessage && <div className="text-red-500 text-center px-3 py-4 bg-red-100 max-w-[400px] mx-auto my-8">{errorMessage}</div>}
             <form
                 className="flex flex-col md:flex-row md:gap-[27px] items-end flex-wrap"
                 onSubmit={generateDiscountHandler}
@@ -70,7 +90,7 @@ const CalcDiscount = () => {
                     />
                 </div>
                 <Button
-                    type="submit"
+                    // type="submit"
                     className="h-[66px] px-[28px] py-[15px] rounded-sm font-extrabold bg-green-500 max-w-[178px]"
                 >
                     %محاسبه
