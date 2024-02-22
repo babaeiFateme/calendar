@@ -8,8 +8,8 @@ const CalcDiscount = () => {
     const [num, setNum] = useState(0);
     return (
         <>
-            <form className="grid sm:grid-cols-2 md:grid-cols-8 bg-green-400 md:gap-[27px]">
-                <div className="lg:col-span-3 flex flex-col">
+            <form className="flex flex-col md:flex-row bg-green-400 md:gap-[27px] items-end">
+                <div className="max-w-[406px] w-full flex flex-col">
                     <label
                         htmlFor="discount"
                         className="font-extrabold text-2xl"
@@ -17,24 +17,26 @@ const CalcDiscount = () => {
                         درصد
                     </label>
                     <input
+                        className="py-[15px] px-[24px] h-[66px] "
                         type="number"
                         name="discount"
                         id="discount"
                         placeholder="میزان درصد  خود را وارد کنید"
                     />
                 </div>
-                <div className="lg:col-span-3 bg-green-400 flex flex-col">
+                <div className="max-w-[406px] w-full flex flex-col">
                     <label htmlFor="num" className="font-extrabold text-2xl">
                         عدد مورد نظر را وارد کنید
                     </label>
                     <input
+                        className="py-[15px] px-[24px] h-[66px] max-w-[406px]"
                         name="num"
                         type="text"
                         id="num"
                         placeholder="مقدار عدد خود را وارد کنید"
                     />
                 </div>
-                <Button className="md:col-span-2 px-[28px] py-[15px] rounded-sm font-extrabold bg-green-500">
+                <Button className="h-[66px] px-[28px] py-[15px] rounded-sm font-extrabold bg-green-500 max-w-[178px]">
                     %محاسبه
                 </Button>
             </form>
