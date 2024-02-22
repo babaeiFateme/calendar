@@ -48,8 +48,7 @@ const CalcDiscount = () => {
                     تخفیفم چقدر شده؟
                 </h2>
                 <span className="font-normal text-xl">
-                    تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران
-                </span>
+                    برای محاسبه درصد تست , تخفیف و ... اطلاعات کادر زیر را وارد کنید                </span>
             </div>
             {/* Error message display */}
             {errorMessage && <div className="text-red-500 text-center px-3 py-4 bg-red-100 max-w-[400px] mx-auto my-8">{errorMessage}</div>}
