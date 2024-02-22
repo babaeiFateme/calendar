@@ -68,14 +68,12 @@ const CalcDiscount = () => {
                     %محاسبه
                 </Button>
             </form>
-            {discountResult !== null && (
-                <div className="flex justify-between items-center bg-gray-700 text-white px-[24px] py-[44px] my-8">
-                    <span>
-                        {formData.discount}٪ عدد {formData.num} برابر است:
-                    </span>
-                    <span>{discountResult}</span>
-                </div>
-            )}
+            <div className="flex justify-between items-center bg-gray-700 text-white px-[24px] py-[44px] my-8">
+                <span>
+                    {formData.discount}٪ عدد {formData.num} برابر است:
+                </span>
+                <span>{discountResult}</span>
+            </div>
         </>
     );
 };
