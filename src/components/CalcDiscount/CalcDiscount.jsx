@@ -8,16 +8,16 @@ const CalcDiscount = () => {
     const [num, setNum] = useState(0);
     return (
         <>
-            <form className="flex flex-col md:flex-row bg-green-400 md:gap-[27px] items-end">
+            <form className="flex flex-col md:flex-row md:gap-[27px] items-end flex-wrap">
                 <div className="max-w-[406px] w-full flex flex-col">
                     <label
                         htmlFor="discount"
-                        className="font-extrabold text-2xl"
+                        className="font-extrabold text-2xl mb-2"
                     >
                         درصد
                     </label>
                     <input
-                        className="py-[15px] px-[24px] h-[66px] "
+                        className="sp-border rounded-sm py-[15px] px-[24px] h-[66px] bg-gray-700 font-normal text-base text-white placeholder:text-white placeholder:text-base"
                         type="number"
                         name="discount"
                         id="discount"
@@ -25,11 +25,14 @@ const CalcDiscount = () => {
                     />
                 </div>
                 <div className="max-w-[406px] w-full flex flex-col">
-                    <label htmlFor="num" className="font-extrabold text-2xl">
+                    <label
+                        htmlFor="num"
+                        className="font-extrabold text-2xl mb-2"
+                    >
                         عدد مورد نظر را وارد کنید
                     </label>
                     <input
-                        className="py-[15px] px-[24px] h-[66px] max-w-[406px]"
+                        className="sp-border rounded-sm py-[15px] px-[24px] h-[66px] max-w-[406px] bg-gray-700 font-normal text-base text-white placeholder:text-white placeholder:text-base "
                         name="num"
                         type="text"
                         id="num"
@@ -40,7 +43,7 @@ const CalcDiscount = () => {
                     %محاسبه
                 </Button>
             </form>
-            <div className="flex justify-between items-center bg-green-100 text-green-800 px-[24px] py-[44px] my-8">
+            <div className="flex justify-between items-center bg-gray-700 text-white px-[24px] py-[44px] my-8">
                 <span>
                     {disCountVal}٪ عدد {num} برابر است:
                 </span>

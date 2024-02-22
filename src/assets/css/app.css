@@ -55,3 +55,9 @@ svg {
 .sidebar svg {
     fill: #555555;
 }
+
+.sp-border {
+    border: 1.48px solid;
+    border-image-source: linear-gradient(-45deg, rgba(255, 255, 255, 0.11) 1.19%, rgba(255, 255, 255, 0) 36.37%);
+    border-image-slice: 1;
+}

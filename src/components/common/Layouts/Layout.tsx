@@ -11,7 +11,7 @@ const Layout = () => {
                 <Sidebar />
                 <div className="flex-1 p-10">
                     <Header />
-                    <div className="p-4">
+                    <div className="p-4 max-w-[1056px] w-full">
                         <Outlet />
                     </div>
                 </div>
