@@ -25,6 +25,14 @@ const CalcDiscount = () => {
 
     return (
         <>
+            <div className="flex flex-col gap-3 my-[37px]">
+                <h2 className="text-green-400 font-extrabold text-2xl mb-[7px]">
+                    تخفیفم چقدر شده؟
+                </h2>
+                <span className="font-normal text-xl">
+                    تاریخ شمسی ، میلادی و قمری امروز به همراه ساعت ایران
+                </span>
+            </div>
             <form
                 className="flex flex-col md:flex-row md:gap-[27px] items-end flex-wrap"
                 onSubmit={generateDiscountHandler}
