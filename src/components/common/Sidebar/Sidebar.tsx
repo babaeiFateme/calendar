@@ -1,21 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
 
 import logo from '../icons/logo.jpg'
+import Discount from "src/pages/Discount";
 
 
 
 const sidebarItems = [
     { icon: <ChartIcon />, text: 'لیست داشبورد', link: '/' },
-    { icon: <FileIcon />, text: 'لیست خدمات', link: '/' },
-    { icon: <ShopIcon />, text: 'درخواست خدمات', link: '/' },
-    { icon: <WalletIcon />, text: 'کیف پول', link: '/' },
-    { icon: <UserIcon />, text: 'پروفایل', link: '/' },
-    { icon: <LogoutIcon />, text: 'خروج', link: '/' }
+    { icon: <FileIcon />, text: 'لیست خدمات', link: '/a' },
+    { icon: <ShopIcon />, text: 'درخواست خدمات', link: '/b' },
+    { icon: <WalletIcon />, text: 'کیف پول', link: '/discount' },
+    { icon: <UserIcon />, text: 'پروفایل', link: '/z' },
+    { icon: <LogoutIcon />, text: 'خروج', link: '/logout' },
 ];
 
 const Sidebar = () => {
+    const location = useLocation();
     return (
         <>
             <div className="sidebar w-[350px] flex-shrink-0 absolute md:relative h-screen">
@@ -27,7 +29,7 @@ const Sidebar = () => {
                     </h1>
                     <ul className="mt-4 p-4">
                         {sidebarItems.map((item, index) => (
-                            <li key={index} className={`mb-[40px] p-3 rounded-md ${index === 3 ? "active" : ""}`}>
+                            <li key={index} className={`mb-[40px] p-3 rounded-md ${location.pathname === item.link ? "active" : ""}`}>
                                 <div>
                                     <Link to={item.link} className="flex gap-2">
                                         {item.icon}
