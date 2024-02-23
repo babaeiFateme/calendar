@@ -1,15 +1,34 @@
 body {
-    background-color: #222423;
     height: 100vh;
     color: #fff;
+    background-image: url("../../../public/bg.png");
+}
+
+body main {
+
+    background-color: #222423;
+    position: relative;
+}
+
+body main::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/bg.png"), url("../../../public/MapChart_Map-1\ 2.png");
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 50%;
+    background-position: center center;
+    background-size: cover;
 }
 
 .sidebar {
-    background-image: linear-gradient(to left, #242726, #242726);
-    border: 3px solid;
-    border-image: linear-gradient(to right, #242726, #242726);
-    border-image-slice: 1;
-
+    background: linear-gradient(131.42deg, #242726 6.67%, rgba(36, 39, 38, 0) 74.33%);
+    border: 2.51px solid;
+    border-image: linear-gradient(90deg, #242726, #ffffff38) 1;
+    border-radius: 7px 7px 0 0;
 }
 
 .header-box {
@@ -28,7 +47,6 @@ body {
     border-image: linear-gradient(to right, #78797950, #242726);
     border-image-slice: 1;
     background-image: linear-gradient(to right, #7978781a, #242726);
-
 }
 
 .list-date .item-box:nth-child(even) {

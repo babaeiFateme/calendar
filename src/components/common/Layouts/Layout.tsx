@@ -7,7 +7,7 @@ import Header from "../Header/Header";
 const Layout = () => {
     return (
         <main>
-            <div className="flex h-screen p-0 md:px-[250px] md:py-[30px]">
+            <div className="flex h-screen p-0 lg:px-[250px] lg:pt-[30px]">
                 <Sidebar />
                 <div className="flex-1 p-10">
                     <Header />
