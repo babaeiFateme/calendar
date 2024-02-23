@@ -41,17 +41,25 @@ body main::after {
 }
 
 .box {
-    background-image: linear-gradient(to left, #242726, #7978781a)
+    background-image: linear-gradient(to left, #242726, #7978781a);
 }
 
 .list-date .item-box {
     background-image: linear-gradient(-131.5deg, #79787816 30%, #24272698 40%);
+    font-weight: 800;
+    font-size: 24;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(89.43deg, rgba(255, 255, 255, 0.11) 1.19%, rgba(255, 255, 255, 0) 36.37%);
+
+
 }
 
 .list-date .item-box:nth-child(even) {
-    /* border: 1px solid;
-    border-image: linear-gradient(to left, #78797950, #242726);
-    border-image-slice: 1; */
+    border-radius: 6px;
+    border: 1px solid;
+    border-image-source: linear-gradient(-89.43deg, rgba(255, 255, 255, 0.11) 1.19%, rgba(255, 255, 255, 0) 36.37%);
+    border-image-slice: 1;
     background-image: linear-gradient(+131.5deg, #79787816 30%, #24272694 40%);
 
 }
