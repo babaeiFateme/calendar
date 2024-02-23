@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
+import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../../icons/SidebarIcons';
 
-import logo from '../icons/logo.svg'
+import logo from '../../icons/logo.svg'
 
 
 

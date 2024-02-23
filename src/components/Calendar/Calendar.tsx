@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Button from '../common/Button/Button';
 import { formatDate } from '../../utils/englishMonths';
 import { formatPersianDate } from '../../utils/persianDate';
-import ArrowLeft from '../common/icons/ArrowLeft';
-import ArrowRight from '../common/icons/ArrowRight';
+import ArrowLeft from '../icons/ArrowLeft';
+import ArrowRight from '../icons/ArrowRight';
 import { getCovertDate } from 'src/utils/getConvertDate';
 
 
