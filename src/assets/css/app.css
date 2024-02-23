@@ -8,6 +8,7 @@ body main {
 
     background-color: #222423;
     position: relative;
+    z-index: 40;
 }
 
 body main::after {
@@ -28,6 +29,7 @@ body main::after {
     background: linear-gradient(131.42deg, #242726 6.67%, rgba(36, 39, 38, 0) 74.33%);
     border: 2.51px solid;
     border-image: linear-gradient(90deg, #242726, #ffffff38) 1;
+    border-bottom: 0;
     border-radius: 7px 7px 0 0;
 }
 
@@ -43,10 +45,18 @@ body main::after {
 }
 
 .list-date .item-box {
-    border: 1px solid;
+    /* border: 1px solid;
     border-image: linear-gradient(to right, #78797950, #242726);
-    border-image-slice: 1;
-    background-image: linear-gradient(to right, #7978781a, #242726);
+    border-image-slice: 1; */
+    border: 1.48px solid;
+
+    border-image-source: linear-gradient(89.43deg, rgba(255, 255, 255, 0.11) 1.19%, rgba(255, 255, 255, 0) 36.37%);
+
+
+    /* background-image: linear-gradient(to right, #7978781a, #242726); */
+    background: linear-gradient(131.42deg, #242726 6.67%, rgba(36, 39, 38, 0) 74.33%);
+
+
 }
 
 .list-date .item-box:nth-child(even) {
