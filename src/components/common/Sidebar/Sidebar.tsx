@@ -27,7 +27,7 @@ const Sidebar = () => {
                 </div>
                 <ul className="mt-4 p-4">
                     {sidebarItems.map((item, index) => (
-                        <li key={index} className={`mb-[40px] p-3 rounded-md ${location.pathname === item.link ? "active" : ""}`}>
+                        <li key={index} className={`mb-[40px] font-medium p-3 rounded-md ${location.pathname === item.link ? "active font-bold" : ""}`}>
                             <div>
                                 <Link to={item.link} className="flex gap-2">
                                     {item.icon}

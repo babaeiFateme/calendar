@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header-box p-[22px]">{getTitle(location.pathname)}</header>
+    <header className="header-box p-[22px] font-bold text-xl">{getTitle(location.pathname)}</header>
   );
 };
 
