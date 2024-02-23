@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { UserIcon, LogoutIcon, ShopIcon, WalletIcon, FileIcon, ChartIcon } from '../icons/SidebarIcons';
 
-import logo from '../icons/logo.jpg'
+import logo from '../icons/logo.svg'
 
 
 
@@ -21,11 +21,10 @@ const Sidebar = () => {
         <>
             <div className="sidebar w-[350px] flex-shrink-0 absolute md:relative h-screen">
                 <div>
-                    <h1 className="text-xl font-bold  p-[36px] flex items-center gap-3"
+                    <div className="text-xl font-bold  p-[36px] flex items-center gap-3"
                     >
-                        <img src={logo} alt="timnow" width={59} height={59} />
-                        تایمیــــنو
-                    </h1>
+                        <img src={logo} alt="timnow" width={223} height={60} />
+                    </div>
                     <ul className="mt-4 p-4">
                         {sidebarItems.map((item, index) => (
                             <li key={index} className={`mb-[40px] p-3 rounded-md ${location.pathname === item.link ? "active" : ""}`}>
