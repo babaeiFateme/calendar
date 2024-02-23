@@ -43,9 +43,22 @@ svg {
     width: 50px;
 }
 
+.sidebar ul li {
+    transition: 0.4s ease;
+}
+
 .sidebar .active {
     background-color: #00a693;
     color: white;
+}
+
+.sidebar li:hover {
+    background-color: #00a693;
+    color: white;
+}
+
+.sidebar li:hover svg {
+    fill: white
 }
 
 .sidebar .active svg {

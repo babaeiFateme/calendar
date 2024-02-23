@@ -19,7 +19,7 @@ const Sidebar = () => {
     const location = useLocation();
     return (
         <>
-            <div className="sidebar w-[350px] flex-shrink-0 absolute md:relative h-screen">
+            <div className="sidebar w-[304px] flex-shrink-0 absolute md:relative h-screen">
                 <div>
                     <div className="text-xl font-bold  p-[36px] flex items-center gap-3"
                     >
